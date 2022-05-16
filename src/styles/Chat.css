@@ -1,0 +1,8 @@
+.chatContainer {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(220, 220, 238);
+}

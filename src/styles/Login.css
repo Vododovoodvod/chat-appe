@@ -1,0 +1,55 @@
+.profilePicture {
+    width: 128px;
+    height: 128px;
+}
+
+.pp0 {
+    background: url("../media/img/0.jpg");
+    background-size: cover;
+}
+
+.pp1 {
+    background: url("../media/img/1.jpg");
+    background-size: cover;
+}
+
+.pp2 {
+    background: url("../media/img/2.jpg");
+    background-size: cover;
+}
+
+.pp3 {
+    background: url("../media/img/3.jpg");
+    background-size: cover;
+}
+
+.pp4 {
+    background: url("../media/img/4.jpg");
+    background-size: cover;
+}
+
+.pp5 {
+    background: url("../media/img/5.jpg");
+    background-size: cover;
+}
+
+.pp6 {
+    background: url("../media/img/6.jpg");
+    background-size: cover;
+}
+
+.pp7 {
+    background: url("../media/img/7.jpg");
+    background-size: cover;
+}
+
+.pp8 {
+    background: url("../media/img/8.jpg");
+    background-size: cover;
+}
+
+.pp9 {
+    background: url("../media/img/9.jpg");
+    background-size: cover;
+}
+

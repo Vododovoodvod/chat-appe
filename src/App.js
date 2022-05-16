@@ -1,29 +1,15 @@
-import { Messages } from "./components/Messages";
-import { Input } from "./components/Input";
+// images from https://www.publicdomainpictures.net
+// import "./styles/CSSreset.css";
+import { Route, Routes } from "react-router-dom";
+import { Chat } from "./pages/Chat.jsx";
+import { Login } from "./pages/Login.jsx";
 
 function App() {
-  const drone = new Scaledrone('DGStLvJcNoOT9USp');
-  const room = drone.subscribe('ChatAppeRoom');
-
-  room.on('open', error => {
-    if (error) {
-      return console.error(error);
-    }
-    // Connected to room
-  });
-
-  const submitMessage = (text) => {
-     drone.publish({
-      room: 'ChatAppeRoom',
-      message: text
-    }); 
-  }
-
   return (
-    <div>
-      <Messages room={room}/>
-      <Input submitMessage={submitMessage}/>
-    </div>
+    <Routes>
+      <Route index element={<Login />} />
+      <Route path="chat" element={<Chat />} />
+    </Routes>
   );
 }
 

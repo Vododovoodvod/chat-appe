@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/Input.css"
 
 export function Input(props) {
     const [message, setMessage] = useState("");
@@ -15,9 +16,9 @@ export function Input(props) {
 
     
     return(
-        <form onSubmit={submit}>
-            <input type="text" autoFocus={true} placeholder="Type a message..." onChange={updateMessage} value={message}/>
-            <button type="submit">Send</button>
+        <form onSubmit={submit} className="input">
+            <input type="text" className="text" autoFocus={true} placeholder="Type a message..." onChange={updateMessage} value={message}/>
+            <button type="submit" className="sendButton"></button>
         </form>
     );
 }

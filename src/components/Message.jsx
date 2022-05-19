@@ -8,10 +8,9 @@ export function Message(props) {
     if (props.clientId === appContext.myId) {
         align=" right";
     }
-    console.log(appContext.color);
 
     return(
-        <div className={"message" + align}>
+        <div className={"message" + align} style={{backgroundColor: props.color}}>
             <img src={require(`../media/img/${props.picture}.jpg`)} className="picture"/>
             <div className="text">{props.text}</div>
         </div>

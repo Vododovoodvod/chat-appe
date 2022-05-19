@@ -23,12 +23,10 @@
 }
 
 .right {
-    background-color:yellow;
     margin-left: auto;
     flex-direction: row-reverse;
 }
 
 .left {
-    background-color:blue;
     margin-right: auto;
 }

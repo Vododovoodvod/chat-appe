@@ -26,6 +26,7 @@ export function Messages(props) {
                         user={message.data.user} 
                         picture={message.data.picture} 
                         clientId={message.clientId}
+                        color={message.data.color}
                     />
                 ))
             }

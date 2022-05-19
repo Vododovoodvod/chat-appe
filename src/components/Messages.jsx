@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Message } from "./Message";
+import "../styles/Chat.css"
 
 export function Messages(props) {
     const [messages, setMessages] = useState([]);
@@ -19,7 +20,13 @@ export function Messages(props) {
         <div>
             {
                 messages.map((message)=>(
-                    <Message key={message.id} text={message.data}/>
+                    <Message 
+                        key={message.id} 
+                        text={message.data.text} 
+                        user={message.data.user} 
+                        picture={message.data.picture} 
+                        clientId={message.clientId}
+                    />
                 ))
             }
         </div>

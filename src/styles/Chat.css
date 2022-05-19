@@ -1,8 +1,18 @@
+.chat {
+    background-color:darkgray;
+    height: 100vh;
+}
+
 .chatContainer {
     display: flex;
-    justify-content: center;
     width: 800px;
+    height: 100vh;
+    padding-bottom: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(220, 220, 238);
+    flex-direction: column-reverse;
+    overflow: auto;
+    background-color: skyblue;
 }

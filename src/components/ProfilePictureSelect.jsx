@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 import "../styles/Login.css"
 
 export function ProfilePictureSelect(props) {
+    const appContext = useContext(AppContext);
 
     const setProfilePicture = () => {
-        console.log(props.value);
+        appContext.setUserPicture(props.value);
     }
 
     return(

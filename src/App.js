@@ -1,5 +1,5 @@
 // images from https://www.publicdomainpictures.net
-// import "./styles/CSSreset.css";
+ import "./styles/CSSreset.css";
 import { Route, Routes } from "react-router-dom";
 import { Chat } from "./pages/Chat.jsx";
 import { Login } from "./pages/Login.jsx";

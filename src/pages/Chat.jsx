@@ -1,10 +1,20 @@
 import { useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../context/AppContext";
 import { Messages } from "../components/Messages";
 import { Input } from "../components/Input";
 import "../styles/Chat.css"
 
 export function Chat() {
     const navigate = useNavigate();
+    const appContext = useContext(AppContext);
+    
+    useEffect(()=>{
+        if (!appContext.hasUserPicture()) {
+            navigate("/");
+        }
+    },[navigate, appContext, appContext.hasUserPicture]);
+
     const drone = new Scaledrone('DGStLvJcNoOT9USp');
     const room = drone.subscribe('ChatAppeRoom');
 
@@ -12,20 +22,22 @@ export function Chat() {
         if (error) {
         return console.error(error);
         }
-        // Connected to room
+        appContext.myId = room.scaledrone.clientId;
     });
 
-    const submitMessage = (text) => {
+    const submitMessage = (msg) => {
         drone.publish({
         room: 'ChatAppeRoom',
-        message: text
-        }); 
+        message: msg
+        });
     }
     
     return (
-        <div className="chatContainer">
-            <Messages room={room}/>
-            <Input submitMessage={submitMessage}/>
+        <div className="chat">
+            <div className="chatContainer">
+                <Messages room={room}/>
+                <Input submitMessage={submitMessage}/>
+            </div>
         </div>
     );
 }

@@ -2,13 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { ProfilePictureSelect } from "./ProfilePictureSelect";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import randomColor from "randomcolor";
 
 export function SelectPicture() {
     const appContext = useContext(AppContext);
     const navigate = useNavigate();
-    let color = randomColor();
-    appContext.color=color;
 
     const logIn = () => {
         navigate("/chat");

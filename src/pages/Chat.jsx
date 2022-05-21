@@ -11,7 +11,7 @@ export function Chat() {
     const appContext = useContext(AppContext);
     
     useEffect(()=>{
-        if (!appContext.hasUserPicture()) {
+        if (!appContext.loggedIn) {
             navigate("/");
         }
     },[navigate, appContext, appContext.hasUserPicture]);

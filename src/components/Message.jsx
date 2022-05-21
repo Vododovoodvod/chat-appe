@@ -8,6 +8,7 @@ export function Message(props) {
     if (props.clientId === appContext.myId) {
         align=" right";
     }
+    console.log(appContext.color);
 
     return(
         <div className={"message" + align} >

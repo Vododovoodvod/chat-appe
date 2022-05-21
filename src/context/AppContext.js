@@ -1,4 +1,5 @@
 import { createContext, useCallback, useState } from "react";
+//import randomColor from "randomcolor";
 
 export const AppContext = createContext();
 export const AppConsumer = AppContext.Consumer;
@@ -8,7 +9,13 @@ export function AppProvider(props) {
     const [picture, setPicture] = useState(null);
     const [loggedIn, setLoggedIn] = useState(false);
     let myId = "";
-    let color = "";
+
+    const generateHsvColor = () => {
+        const hue = Math.floor(Math.random() * 361);
+        return `hsl(${hue}, 50%, 80%)`;
+    }
+
+    const color = generateHsvColor();
     
     const toogleLoggedIn = () => {
         setLoggedIn(!loggedIn);
@@ -21,9 +28,12 @@ export function AppProvider(props) {
 
     const setUserPicture = (index) => {
         setPicture(index);
-        console.log(index);
     }
     const hasUserPicture = useCallback(() => picture !== null, [picture]);
+
+    const setUserColor = (clr) => {
+        setColor(clr);
+    }
 
     const value = {
         user,
@@ -33,6 +43,7 @@ export function AppProvider(props) {
         setUserPicture,
         hasUserPicture,
         myId,
+        setUserColor,
         color,
         toogleLoggedIn,
         loggedIn

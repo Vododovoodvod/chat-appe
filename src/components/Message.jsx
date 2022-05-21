@@ -12,7 +12,7 @@ export function Message(props) {
     return(
         <div className={"message" + align} >
             <img src={require(`../media/img/${props.picture}.jpg`)} className="picture"/>
-            <div className="text" style={{backgroundColor: props.color}}>{props.text}</div>
+            {props.text === "b4n4n4-2022__jakoStrogoKodiranaPoruka_!=)/&" ? <img src={require("../media/img/banana.png")}/> : <div className="text" style={{backgroundColor: props.color}}>{props.text}</div>}
         </div>
     );
 }

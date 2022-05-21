@@ -21,6 +21,7 @@ export function AppProvider(props) {
 
     const setUserPicture = (index) => {
         setPicture(index);
+        console.log(index);
     }
     const hasUserPicture = useCallback(() => picture !== null, [picture]);
 

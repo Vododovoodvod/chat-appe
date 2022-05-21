@@ -10,6 +10,10 @@ export function NameInput() {
         if (event.target[0].value !== "") {
             appContext.setUserName( "Ape " + event.target[0].value); 
         }
+        
+        if (event.target[0].value.toLowerCase() == "suzzane") {
+            appContext.setUserPicture(99);
+        }
     }
 
     return(

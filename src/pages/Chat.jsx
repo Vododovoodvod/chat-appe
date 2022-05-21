@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 import { Messages } from "../components/Messages";
 import { Input } from "../components/Input";
 import "../styles/Chat.css"
+import { Header } from "../components/Header";
 
 export function Chat() {
     const navigate = useNavigate();
@@ -33,11 +34,15 @@ export function Chat() {
     }
     
     return (
-        <div className="chat">
-            <div className="chatContainer">
-                <Messages room={room}/>
-                <Input submitMessage={submitMessage}/>
+        <div>
+            <Header/>
+            <div className="chat">
+                <div className="chatContainer">
+                    <Messages room={room}/>
+                    <Input submitMessage={submitMessage}/>
+                </div>
             </div>
         </div>
+        
     );
 }

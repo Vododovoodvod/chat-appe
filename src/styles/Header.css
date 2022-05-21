@@ -1,0 +1,28 @@
+.header {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-color: #023436;
+}
+
+.logo {
+    margin: auto;
+}
+
+.button {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    background-color: #84a282;
+    width: 150px;
+    height: 45px;
+    border-radius: 15px;
+    font-size: larger;
+    text-align: center;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+.button:hover {
+    width: 160px;
+}

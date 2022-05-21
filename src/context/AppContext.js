@@ -6,9 +6,14 @@ export const AppConsumer = AppContext.Consumer;
 export function AppProvider(props) {
     const [user, setUser] = useState(null);
     const [picture, setPicture] = useState(null);
+    const [loggedIn, setLoggedIn] = useState(false);
     let myId = "";
     let color = "";
     
+    const toogleLoggedIn = () => {
+        setLoggedIn(!loggedIn);
+    }
+
     const setUserName = (name) => {
         setUser(name);
     }
@@ -27,7 +32,9 @@ export function AppProvider(props) {
         setUserPicture,
         hasUserPicture,
         myId,
-        color
+        color,
+        toogleLoggedIn,
+        loggedIn
     };
 
     return (

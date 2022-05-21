@@ -12,13 +12,14 @@ export function SelectPicture() {
 
     const logIn = () => {
         navigate("/chat");
+        appContext.toogleLoggedIn();
     }
 
     return(
         <div className="loginBcg">
             <div className="pictureInput">
                 {appContext.hasUserPicture() ? <img src={require(`../media/img/${appContext.picture}.jpg`)} className="mainPicture"/> : <img src={require("../media/img/noImg.jpg")} className="mainPicture"/> }
-                <div>Select your avatar</div>
+                <div className="pictureLabel">Select your avatar</div>
                 <div className="picturesContainer">
                     <ProfilePictureSelect value={0}/>
                     <ProfilePictureSelect value={1}/>
@@ -31,7 +32,7 @@ export function SelectPicture() {
                     <ProfilePictureSelect value={8}/>
                     <ProfilePictureSelect value={9}/>
                 </div>
-                <button onClick={logIn}>Enter the jungle</button>
+                <button onClick={logIn} className="nameInputButton">Enter the jungle</button>
             </div>
         </div>
     );

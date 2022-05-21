@@ -1,10 +1,21 @@
+@keyframes onLoad {
+    from {
+      scale: 97%;
+    }
+  
+    to {
+      scale: 100%;
+    }
+  }
+
 .loginBcg {
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: yellowgreen;
+    background-image: url(../media/img/bcg.jpg);
+    background-repeat: repeat
 }
 
 .nameInput {
@@ -12,18 +23,45 @@
     flex-direction: column;
     justify-content: center;
     width: 500px;
-    background-color: aqua;
+    background-color:#f5dcab;
     height: 400px;
     border-radius: 10px;
     box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    animation-duration: 0.15s;
+    animation-name: onLoad;
 }
 
 .nameInputText {
-    background-color: violet;
+    background-color:whitesmoke;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    border-radius: 15px;
+    font-size: larger;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+.nameInputText::placeholder {
+    color: slategray;
+    
 }
 
 .nameInputButton {
-    background-color: tan;
+    background-color: #84a282;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    border-radius: 15px;
+    font-size: larger;
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+.nameInputButton:hover {
+    width: 455px;
 }
 
 
@@ -33,11 +71,18 @@
     justify-content: center;
     align-items: center;
     width: 600px;
-    background-color: aqua;
+    background-color: #f5dcab;
     height: 700px;
     border-radius: 10px;
     box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    animation-duration: 0.15s;
+    animation-name: onLoad;
+}
+
+.pictureLabel {
+    color: rgb(54, 54, 54);
+    font-size: 24px;
 }
 
 .mainPicture {
@@ -49,6 +94,7 @@
 
 .picturesContainer {
     padding: 4px;
+    padding-bottom: 50px;
 }
 
 .profilePicture {

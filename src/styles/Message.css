@@ -1,17 +1,27 @@
+@keyframes onLoad {
+    from {
+      scale: 90%;
+    }
+  
+    to {
+      scale: 100%;
+    }
+  }
+
 .message {
     margin-bottom: 6px;
     display: flex;
-    padding: 5px;
+    animation-duration: 0.2s;
+    animation-name: onLoad;
     width: fit-content;
     max-width: 750px;
-    border-radius: 25px;
-    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding-left: 5px 0px;
 }
 
 .picture {
     float: left;
-    max-width: 42px;
-    max-height: 42px;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 50%;
 }
 
@@ -19,7 +29,12 @@
     display: flex;
     align-items: center;
     padding-right: 10px;
-    font-size: medium;
+    font-size: larger;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    min-height: 45px;
 }
 
 .right {

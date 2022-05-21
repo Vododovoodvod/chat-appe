@@ -10,9 +10,9 @@ export function Message(props) {
     }
 
     return(
-        <div className={"message" + align} style={{backgroundColor: props.color}}>
+        <div className={"message" + align} >
             <img src={require(`../media/img/${props.picture}.jpg`)} className="picture"/>
-            <div className="text">{props.text}</div>
+            <div className="text" style={{backgroundColor: props.color}}>{props.text}</div>
         </div>
     );
 }

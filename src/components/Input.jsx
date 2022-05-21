@@ -22,7 +22,7 @@ export function Input(props) {
     
     return(
         <form onSubmit={submit} className="input">
-            <input type="text" className="text" autoFocus={true} placeholder="Type a message..." onChange={updateMessage} value={message}/>
+            <input type="text" className="textInput" autoFocus={true} placeholder="Type a message..." onChange={updateMessage} value={message}/>
             <button type="submit" className="sendButton"></button>
         </form>
     );
